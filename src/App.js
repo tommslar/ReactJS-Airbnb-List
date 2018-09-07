@@ -19,7 +19,7 @@ export default () => (
                 <DateRange
                     dataField="date_from"
                     componentId="DateRangeSensor"
-                    title="When"
+                    title="Fecha"
                     numberOfMonths={2}
                     queryFormat="basic_date"
                     initialMonth={new Date('04-01-2017')}
@@ -28,7 +28,7 @@ export default () => (
                 <NumberBox
                     componentId="GuestSensor"
                     dataField="accommodates"
-                    title="Guests"
+                    title="Cantidad de gente"
                     defaultSelected={2}
                     labelPosition="right"
                     data={{
@@ -40,7 +40,7 @@ export default () => (
                 <RangeSlider
                     componentId="PriceSensor"
                     dataField="price"
-                    title="Price Range"
+                    title="Rango de precios"
                     range={{
                         start: 10,
                         end: 250,
@@ -51,7 +51,7 @@ export default () => (
                     }}
                     defaultSelected={{
                         start: 10,
-                        end: 50,
+                        end: 150,
                     }}
                     stepValue={10}
                     interval={20}
@@ -72,7 +72,7 @@ export default () => (
                     description: (
                         <div>
                             <div className="price">${data.price}</div>
-                            <p className="info">{data.room_type} · {data.accommodates} guests</p>
+                            <p className="info">{data.room_type} · {data.accommodates} personas</p>
                         </div>
                     ),
                     url: data.listing_url,
